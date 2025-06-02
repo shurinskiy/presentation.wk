@@ -1,4 +1,5 @@
 import { throttle } from "./libs/utils";
+import "../../node_modules/swiped-events/dist/swiped-events.min.js";
 import "./polyfills.js";
 import "./blocks.js";
 

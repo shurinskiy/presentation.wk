@@ -1,0 +1,49 @@
+@use 'lib' as *;
+
+.work {
+	$self: &;
+	padding: 100px 0 130px;
+
+	&__inner {
+
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 64px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		grid-gap: 80px 70px;
+		counter-reset: workCounter;
+	}
+
+	&__item {
+		font-size: 20px;
+		font-weight: 300;
+		position: relative;
+		padding-left: 110px;
+
+		span {
+			font-weight: 400;
+		}
+
+		&::before {
+			display: block;
+			counter-increment: workCounter;
+			content: '0'counter(workCounter);
+			font-size: 48px;
+			font-weight: 900;
+			color: var(--green);
+			padding: 10px 0 0 10px;
+			background: svg-url('<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="49" height="49" fill="#EDEDED"/></svg>') top left / auto 75% no-repeat transparent;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			translate: 0 -50%;
+		}
+	}
+}

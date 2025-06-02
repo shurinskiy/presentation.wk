@@ -23,27 +23,26 @@
 }
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
-
-// @include font-face("Montserrat-ExtraLight", "MR", 200);
-// @include font-face("Montserrat-ExtraBold", "MR", 800);
-// @include font-face("Montserrat-SemiBold", "MR", 600);
-// @include font-face("Montserrat-Regular", "MR", 400);
-// @include font-face("Montserrat-Medium", "MR", 500);
-// @include font-face("Montserrat-Light", "MR", 300);
-// @include font-face("Montserrat-Black", "MR", 900);
-// @include font-face("Montserrat-Bold", "MR", 700);
-// @include font-face("Montserrat-Thin", "MR", 100);
+@include font-face("Inter-ExtraLight", "IR", 200);
+@include font-face("Inter-ExtraBold", "IR", 800);
+@include font-face("Inter-SemiBold", "IR", 600);
+@include font-face("Inter-Regular", "IR", 400);
+@include font-face("Inter-Medium", "IR", 500);
+@include font-face("Inter-Light", "IR", 300);
+@include font-face("Inter-Black", "IR", 900);
+@include font-face("Inter-Bold", "IR", 700);
+@include font-face("Inter-Thin", "IR", 100);
 
 body, html {
 	// scrollbar-gutter: stable;
-	// scroll-behavior: smooth;	
+	scroll-behavior: smooth;	
 	box-sizing: border-box;
-	background-color: var(--background);
+	font-family: "IR", sans-serif;
+	background-color: #fff;
 	font-size: var(--size);
 	color: var(--text);
-	font-family: sans-serif;
 	line-height: 1.2;
 	font-weight: 400;
 	min-height: 100vh;
@@ -64,26 +63,7 @@ p { margin-bottom: 10px; }
 strong { font-weight: bold; }
 em { font-style: italic; }
 
-
-.mb1 { margin-bottom: 100px; }
-.mb2 { margin-bottom: 80px; }
-.mb3 { margin-bottom: 60px; }
-.mb4 { margin-bottom: 40px; }
-.mb5 { margin-bottom: 30px; }
-
-
-@include media('<=md') {
-	.mb1 { margin-bottom: 80px; }
-	.mb2 { margin-bottom: 60px; }
-	.mb3 { margin-bottom: 40px; }
-	.mb4 { margin-bottom: 30px; }
-	.mb5 { margin-bottom: 20px; }
-}
-
-@include media('<=xxs') {
-	.mb1 { margin-bottom: 60px; }
-	.mb2 { margin-bottom: 40px; }
-	.mb3 { margin-bottom: 30px; }
-	.mb4 { margin-bottom: 20px; }
-	.mb5 { margin-bottom: 15px; }
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }

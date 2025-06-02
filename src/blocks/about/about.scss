@@ -1,0 +1,74 @@
+@use 'lib' as *;
+
+.about {
+	$self: &;
+	background-color: var(--background);
+	padding: 120px 0 135px;
+	position: relative;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: minmax(0, 0.62fr) minmax(0, 0.38fr);
+		align-items: center;
+		grid-gap: 50px;
+	}
+
+	&__side {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 40px;
+	}
+
+	&__title {
+
+	}
+
+	&__text {
+		display: flex;
+		flex-flow: column nowrap;
+		font-size: 20px;
+		gap: 24px;
+
+		p {
+			margin: 0;
+		}
+
+		span {
+			color: var(--green);
+		}
+	}
+
+	&__image {
+		padding: 0 27px 27px 0;
+		position: relative;
+
+		&::before {
+			display: block;
+			content: '';
+			background-color: var(--light);
+			position: absolute;
+			aspect-ratio: 1;
+			width: 76%;
+			bottom: 0;
+			right: 0;
+		}
+
+		img {
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__legend {
+		position: absolute;
+		bottom: -23px;
+		left: var(--gap);
+		width: calc(100% - var(--gap) * 2);
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}

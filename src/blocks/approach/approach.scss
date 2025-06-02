@@ -1,0 +1,57 @@
+@use 'lib' as *;
+
+.approach {
+	$self: &;
+	background: url('./images/approach-bg.webp') center / cover no-repeat #18171D;
+	padding: 170px 0 200px;
+
+	&__inner {
+
+	}
+
+	&__title {
+		color: #fff;
+		text-align: center;
+		margin-bottom: 64px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 24px;
+		max-width: 1050px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	&__item {
+		grid-column: span 1;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		gap: 24px;
+	}
+
+	&__icon {
+		width: 127px;
+		display: flex;
+		aspect-ratio: 1;
+		align-items: center;
+		justify-content: center;
+		background: svg-url('<svg width="111" height="127" viewBox="0 0 111 127" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M109.507 32.3271V94.6719L55.5073 125.845L1.50732 94.6719V32.3271L55.5073 1.1543L109.507 32.3271Z" fill="white" stroke="#C9D2AC" stroke-width="2"/></svg>') center / contain no-repeat transparent;
+
+		svg {
+			width: 38%;
+			aspect-ratio: 1;
+			fill: var(--green);
+		}
+	}
+
+	&__text {
+		text-align: center;
+		color: #DDFF99;
+		font-size: 17px;
+		font-weight: 300;
+		line-height: 1.25;
+	}
+}

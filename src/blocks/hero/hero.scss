@@ -1,0 +1,81 @@
+@use 'lib' as *;
+
+.hero {
+	$self: &;
+	min-height: calc(var(--vh, 1vh) * 100);
+	background: url('./images/hero-bg.webp') center / cover no-repeat #18171D;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
+
+	&__inner {
+		max-width: 780px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		gap: 90px;
+	}
+
+	&__title {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 28px;
+		text-align: center;
+
+		strong {
+			display: block;
+			font-size: 50px;
+			color: #fff;
+		}
+
+		span {
+			display: block;
+			font-size: 26px;
+			color: var(--bright);
+			font-weight: 300;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		max-width: 670px;
+		width: 100%;
+		gap: 24px;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		padding: 10px 28px;
+		height: 70px;
+		gap: 26px;
+		color: #fff;
+		font-size: 20px;
+		font-weight: 200;
+		text-decoration: none;
+		transition: text-shadow 0.3s;
+
+		&:hover {
+			text-shadow: 
+				1px 1px 15px rgba(255, 255, 255), 
+				-1px -1px 15px rgba(255, 255, 255);
+		}
+
+		svg {
+			width: 38px;
+			fill: #fff;
+			flex-shrink: 0;
+			aspect-ratio: 1;
+		}
+
+		&_view {
+			border: 1px solid #fff;
+		}
+	
+		&_tgm {
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+	}
+}

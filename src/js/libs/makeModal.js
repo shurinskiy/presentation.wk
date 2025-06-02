@@ -13,7 +13,7 @@
 * если значение есть, но НЕ начинается с "#" - создает элемент img, в src указывает значение data-modal
 * 
 * <a href="./" data-modal="./images/somepicture.png" rel="gallery"></a>: 
-* если значение есть, но НЕ начинается с "#", а так же имеет не пустой атрибут "rel" - создает элемент img, 
+* если значение есть, но НЕ начинается с "#", а так-же имеет не пустой атрибут "rel" - создает элемент img, 
 * в src указывает значение data-modal и создает галерею, из всех найденных, с таким же "rel"
 * 
 * <a href="./" data-modal rel="gallery"><img src="./images/somepicture.png" alt="" /></a>:
@@ -21,7 +21,7 @@
 * 
 * 
 * @элемент для прослушивания:
-* <span class="somebutton" data-modal="someblock"></span>
+* <span class="somebutton" data-modal="#someblock"></span>
 * 
 * @вызов:
 * 

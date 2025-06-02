@@ -1,6 +1,169 @@
-@@include("_head.html", {"id":"home"}) 
-@@include("_header.html") 
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
 
+<section class="hero">
+	<div class="hero__inner container">
+		<h1 class="hero__title">
+			<strong>Pixel-Perfect верстка и фронтенд без компромиссов.</strong>
+			<span>Адаптивные, точные и производительные интерфейсы. С вниманием к деталям и UI/UX</span>
+		</h1>
+		<div class="hero__buttons">
+			<a class="hero__button hero__button_view" href="./#portfolio">
+				<svg><use xlink:href="#eye"></use></svg>
+				<span>Смотреть работы</span>
+			</a>
+			<a class="hero__button hero__button_tgm" href="./">
+				<svg><use xlink:href="#tgm"></use></svg>
+				<span>Написать в телеграм</span>
+			</a>
+		</div>
+	</div>
+</section>
 
+<section class="hello" id="hello">
+	<div class="hello__inner container">
+		<div class="hello__image">
+			<img src="./images/hello-image.webp" alt="">
+		</div>
+		<h2 class="hello__text">Привет!<br/><strong>Я Александр — веб-разработчик</strong>, специализируюсь на вёрстке и интерфейсах.</h2>
+	</div>
+</section>
+
+<section class="about">
+	<div class="about__inner container">
+		<div class="about__side">
+			<h2 class="about__title title">Обо мне</h2>
+			<div class="about__text">
+				<p>Я — веб-разработчик с уклоном в чистый frontend. Делаю адаптивную <span>pixel-perfect</span> вёрстку по макетам, использую для работы свою сборку на Gulp+Webpack, создаю интерфейсы с нуля — <span>без фреймворков</span>, но с любовью к деталям.</p>
+				<p>Умею мыслить как верстальщик, дизайнер и интегратор сразу. Для меня важно, чтобы всё было не просто красиво, но и удобно поддерживать.</p>
+			</div>
+		</div>
+		<div class="about__image">
+			<img src="./images/about-image.webp" alt="">
+		</div>
+	</div>
+	<div class="about__legend"><img src="./images/about-legend.webp" alt=""></div>
+</section>
+
+<section class="work">
+	<div class="work__inner container">
+		<h2 class="work__title title">Что я делаю</h2>
+		<div class="work__items">
+			<div class="work__item"><span>Вёрстка сайтов по макетам</span> (Figma, PSD)</div>
+			<div class="work__item"><span>Адаптивные интерфейсы</span>, mobile-first / desktop-first</div>
+			<div class="work__item"><span>Собственные компоненты</span>: модалки, слайдеры, меню, аккордеоны, квизы, калькуляторы и т.д.</div>
+			<div class="work__item"><span>Scroll-based эффекты</span> и анимации на CSS и JS</div>
+			<div class="work__item"><span>Формы с валидацией</span>, масками и локализацией</div>
+			<div class="work__item"><span>Интеграция в WordPress</span> (ACF, Carbon Fields, CFS)</div>
+		</div>
+	</div>
+</section>
+
+<section class="approach" id="tools">
+	<div class="approach__inner container">
+		<h2 class="approach__title title">Инструменты и подход</h2>
+		<div class="approach__items">
+			<div class="approach__item">
+				<div class="approach__icon">
+					<svg><use xlink:href="#zoom"></use></svg>
+				</div>
+				<div class="approach__text">Точное соответствие макету, контроль отступов, типографики и состояний.</div>
+			</div>
+			<div class="approach__item">
+				<div class="approach__icon">
+					<svg><use xlink:href="#code"></use></svg>
+				</div>
+				<div class="approach__text">HTML/SCSS/JS без фреймворков. БЭМ, доступность, семантика.</div>
+			</div>
+			<div class="approach__item">
+				<div class="approach__icon">
+					<svg><use xlink:href="#doc"></use></svg>
+				</div>
+				<div class="approach__text">Макет → вёрстка → интеграция. Без правок «на лету».</div>
+			</div>
+			<div class="approach__item">
+				<div class="approach__icon">
+					<svg><use xlink:href="#wp"></use></svg>
+				</div>
+				<div class="approach__text">Кастомные темы на WordPress + ACF/Carbon Fields.</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="portfolio" id="portfolio" data-portfolio-js>
+	<div class="portfolio__inner container">
+		<h2 class="portfolio__title title">Мои работы</h2>
+		<div class="portfolio__items">
+			<a class="portfolio__item portfolio__item_light" href="./" data-modal="#case1">
+				<img src="./images/portfolio-image-1.webp" alt="">
+			</a>
+			<a class="portfolio__item" href="./" data-modal="#case2">
+				<img src="./images/portfolio-image-2.webp" alt="">
+			</a>
+			<a class="portfolio__item portfolio__item_light" href="./" data-modal="#case3">
+				<img src="./images/portfolio-image-3.webp" alt="">
+			</a>
+			<a class="portfolio__item" href="./" data-modal="#case4">
+				<img src="./images/portfolio-image-4.webp" alt="">
+			</a>
+			<a class="portfolio__item" href="./" data-modal="#case5">
+				<img src="./images/portfolio-image-5.webp" alt="">
+			</a>
+			<a class="portfolio__item portfolio__item_light" href="./" data-modal="#case6">
+				<img src="./images/portfolio-image-6.webp" alt="">
+			</a>
+			<a class="portfolio__item" href="./" data-modal="#case7">
+				<img src="./images/portfolio-image-7.webp" alt="">
+			</a>
+			<a class="portfolio__item portfolio__item_light" href="./" data-modal="#case8">
+				<img src="./images/portfolio-image-8.webp" alt="">
+			</a>
+		</div>
+	</div>
+</section>
+
+<section class="assembly" id="assembly">
+	<div class="assembly__inner container">
+		<h2 class="assembly__title title">Моя сборка</h2>
+		<div class="assembly__body">
+			<div class="assembly__text">
+				<p><strong><a href="./">Gulp/Webpack Starter</a> — мощная и гибкая сборка для профессиональной фронтенд-разработки.</strong> Эта система идеально подходит для pixel-perfect вёрстки и создания сложных адаптивных интерфейсов на чистом HTML, SCSS и JavaScript без использования фреймворков.</p>
+				<p>Сборка включает все необходимое для комфортной работы: автоматическую оптимизацию кода и изображений, поддержку современных стандартов JavaScript через Babel, удобную организацию SCSS-модулей по методологии БЭМ, а также встроенный сервер с горячей перезагрузкой через BrowserSync.</p>
+				<p>Отдельного внимания заслуживает экосистема готовых JavaScript-решений, расположенных в директории <a href="./">src/js/libs</a> — здесь вы найдете кастомные реализации слайдеров, модальных окон, форм с валидацией, анимаций при скролле, ленивой загрузки изображений и множества других часто востребованных компонентов. Эти решения легко интегрируются в любые проекты и экономят часы рутинной работы.</p>
+				<p>Сборка полностью готова к использованию — просто клонируйте репозиторий, установите зависимости командой npm install и запустите разработку через npm run dev. Этот инструмент отлично подойдет как фрилансерам, так и веб-студиям, которые ценят чистый код, высокую производительность и возможность быстрого старта новых проектов без необходимости каждый раз настраивать сборку с нуля.</p>
+			</div>
+			<div class="assembly__image">
+				<img src="./images/assembly-image.webp" alt="">
+			</div>
+		</div>
+		<div class="assembly__items">
+			<div class="assembly__item">
+				<div class="assembly__item-icon">
+					<svg><use xlink:href="#tool"></use></svg>
+				</div>
+				<div class="assembly__item-text">Gulp + Webpack + SCSS + Babel</div>
+			</div>
+			<div class="assembly__item">
+				<div class="assembly__item-icon">
+					<svg><use xlink:href="#layer"></use></svg>
+				</div>
+				<div class="assembly__item-text">Подключение svg-спрайтов, file-include, typograf</div>
+			</div>
+			<div class="assembly__item">
+				<div class="assembly__item-icon">
+					<svg><use xlink:href="#upload"></use></svg>
+				</div>
+				<div class="assembly__item-text">Поддержка Dev/Prod, Live Reload, FTP-деплой</div>
+			</div>
+			<div class="assembly__item">
+				<div class="assembly__item-icon">
+					<svg><use xlink:href="#puzzle"></use></svg>
+				</div>
+				<div class="assembly__item-text">Структура с компонентами, хуками и кастомными плагинами</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 @@include("_bottom.html")

@@ -1,0 +1,46 @@
+@use 'lib' as *;
+
+.hello {
+	$self: &;
+
+	&__inner {
+		padding: 115px 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		grid-gap: 40px;
+	}
+
+	&__image {
+		max-width: 524px;
+		padding: 35px 0 0 35px;
+		position: relative;
+
+		&::before {
+			display: block;
+			content: '';
+			background-color: var(--light);
+			position: absolute;
+			aspect-ratio: 1;
+			width: 80%;
+			left: 0;
+			top: 0;
+		}
+		
+		img {
+			position: relative;
+			aspect-ratio: 1;
+			display: block;
+			z-index: 1;
+		}
+	}
+
+	&__text {
+		font-size: 34px;
+
+		strong {
+			font-weight: 700;
+			color: var(--green);
+		}
+	}
+}

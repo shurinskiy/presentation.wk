@@ -1,0 +1,81 @@
+@use 'lib' as *;
+
+.modal {
+	$self: &;
+	box-sizing: border-box;
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: calc(var(--vh, 1dvh) * 100);
+	background-color: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(3px);
+	padding: 30px;
+	overflow-y: auto;
+	animation: fadeIn 0.2s;
+
+	@keyframes slideInDown {
+		from { opacity: 0; transform: translateY(-1000px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+
+	&[style*="display: block"] {
+		display: flex !important;
+	}
+
+	&__hidden {
+		display: none;
+	}
+	
+	&__close {
+		@extend %reset-button;
+		position: absolute;
+		top: 10px; right: 10px;
+		border-radius: 100px;
+		cursor: pointer;
+		width: 38px;
+		height: 38px;
+		z-index: 2;
+		background-color: rgba(255, 255, 255, 0.7);
+		border: 1px solid rgba(30, 30, 30, 0.1);
+		backdrop-filter: blur(3px);
+		
+		&::before {
+			display: block;
+			content: '';
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: calc(50% - 10px);
+			top: calc(50% - 10px);
+			background: svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.40694 3.24252L10 8.83557L15.593 3.24252C16.3439 2.49162 17.5083 3.65604 16.7575 4.40694L11.1645 10L16.7575 15.593C17.5084 16.3439 16.3439 17.5084 15.593 16.7575L10 11.1645L4.40694 16.7575C3.65604 17.5083 2.49162 16.3439 3.24252 15.593L8.83557 10L3.24252 4.40694C2.49165 3.65607 3.65607 2.49165 4.40694 3.24252Z" fill="#161C26"/></svg>') center / 16px 16px no-repeat transparent;
+		}
+	}
+
+	&__body {
+		animation: slideInDown 0.7s ease both;
+		box-sizing: border-box;
+		position: relative;
+		overflow-x: hidden;
+		background-color: #eee;
+		border-radius: 12px;
+		margin: auto;
+		padding: 50px 32px 32px;
+		width: 100%;
+		max-width: 600px;
+		box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.07);
+	}
+	
+	&__content {
+		min-height: 150px;
+		position: relative;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+		}
+	}
+}

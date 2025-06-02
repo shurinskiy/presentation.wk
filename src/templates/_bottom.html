@@ -1,8 +1,46 @@
-<footer class="footer"> 
-  
-</footer> 
+<footer class="footer" id="contact">
+	<div class="footer__inner container">
+		<h2 class="footer__title title">Напишите мне</h2>
+		<form class="footer__form form" data-form-js action="./">
+			<div class="form__field">
+				<div class="form__input">
+					<svg><use xlink:href="#user"></use></svg>
+					<input type="text" name="region" placeholder="Ваш регион:" data-rules="omit">
+				</div>
+				<span class="form__error"></span>
+			</div>
+			<div class="form__field">
+				<div class="form__input">
+					<svg><use xlink:href="#user"></use></svg>
+					<input type="text" name="name" placeholder="Ваше имя:" data-rules="req, name, min:2">
+				</div>
+				<span class="form__error"></span>
+			</div>
+			<div class="form__field">
+				<div class="form__input">
+					<svg><use xlink:href="#mail"></use></svg>
+					<input type="text" name="email" placeholder="Ваш email:" data-rules="req, email, min:8">
+				</div>
+				<span class="form__error"></span>
+			</div>
+			<div class="form__field">
+				<div class="form__input">
+					<svg><use xlink:href="#talk"></use></svg>
+					<textarea name="message" placeholder="Ваше сообщение:" data-rules="min:10, max:300"></textarea>
+				</div>
+				<span class="form__error"></span>
+			</div>
+			<button class="form__submit">
+				<span>Отправить</span>
+				<img src="./images/spinner.svg" alt="">
+			</button>
+		</form>
+	</div>
+	<div class="footer__bottom">tumanov &copy; 2025</div>
+</footer>
 
-<!-- @@include("_sprite.svg") -->
+@@include("_modals.html")
+@@include("_sprite.svg")
 <script src="common.js?v=0"></script> 
 </body> 
 </html>

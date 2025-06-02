@@ -1,10 +1,16 @@
 :root {
 	--size: 16px;
-	--background: #fafafa;
-	--text: #272727;
-	--blue: #113859;
-	--blue-rgb: 17, 56, 89;
-	--container: 1400px;
+	--text: #282828;
+	--text-rgb: 40, 40, 40;
+	--background: #EDF2EB;
+	--background-rgb: 237, 242, 235;
+	--bright: #DDFF99;
+	// --bright-rgb: 221, 255, 153;
+	--light: #C9D2AC;
+	// --light-rgb: 201, 210, 172;
+	--green: #618626;
+	// --green-rgb: 97, 134, 38;
+	--container: 1200px;
 	--gap: 24px;
 	
 	@media screen and (max-width: 480px) {
