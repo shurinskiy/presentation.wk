@@ -3,6 +3,6 @@
 .title {
 	$self: &;
 	color: var(--text);
-	font-size: 48px;
 	font-weight: 700;
+	font-size: fluid(48px, 32px);
 }

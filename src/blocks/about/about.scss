@@ -5,12 +5,24 @@
 	background-color: var(--background);
 	padding: 120px 0 135px;
 	position: relative;
+	
+	@include media('<=xs') {
+		padding: 80px 0 125px;
+	}
+	
+	@include media('<=xxs') {
+		padding: 80px 0 110px;
+	}
 
 	&__inner {
 		display: grid;
 		grid-template-columns: minmax(0, 0.62fr) minmax(0, 0.38fr);
 		align-items: center;
 		grid-gap: 50px;
+
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__side {
@@ -20,13 +32,15 @@
 	}
 
 	&__title {
-
+		@include media('<=xs') {
+			text-align: center;
+		}
 	}
 
 	&__text {
 		display: flex;
 		flex-flow: column nowrap;
-		font-size: 20px;
+		font-size: fluid(20px, 17px);
 		gap: 24px;
 
 		p {
@@ -41,6 +55,11 @@
 	&__image {
 		padding: 0 27px 27px 0;
 		position: relative;
+		
+		@include media('<=xs') {
+			max-width: 400px;
+			margin: 0 auto;
+		}
 
 		&::before {
 			display: block;
@@ -65,6 +84,10 @@
 		bottom: -23px;
 		left: var(--gap);
 		width: calc(100% - var(--gap) * 2);
+
+		@include media('<=xs') {
+			bottom: 0;
+		}
 
 		img {
 			display: block;

@@ -15,21 +15,25 @@
 	padding: 30px;
 	overflow-y: auto;
 	animation: fadeIn 0.2s;
-
+	
 	@keyframes slideInDown {
 		from { opacity: 0; transform: translateY(-1000px); }
 		to { opacity: 1; transform: translateY(0); }
 	}
-
+	
 	&[style*="display: block"] {
 		display: flex !important;
+	}
+	
+	&_custom .case {
+		animation: fadeIn 0.4s;
 	}
 
 	&__hidden {
 		display: none;
 	}
 	
-	&__close {
+	&__close, &__button {
 		@extend %reset-button;
 		position: absolute;
 		top: 10px; right: 10px;
@@ -41,15 +45,15 @@
 		background-color: rgba(255, 255, 255, 0.7);
 		border: 1px solid rgba(30, 30, 30, 0.1);
 		backdrop-filter: blur(3px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		
 		&::before {
 			display: block;
 			content: '';
 			width: 20px;
 			height: 20px;
-			position: absolute;
-			left: calc(50% - 10px);
-			top: calc(50% - 10px);
 			background: svg-url('<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.40694 3.24252L10 8.83557L15.593 3.24252C16.3439 2.49162 17.5083 3.65604 16.7575 4.40694L11.1645 10L16.7575 15.593C17.5084 16.3439 16.3439 17.5084 15.593 16.7575L10 11.1645L4.40694 16.7575C3.65604 17.5083 2.49162 16.3439 3.24252 15.593L8.83557 10L3.24252 4.40694C2.49165 3.65607 3.65607 2.49165 4.40694 3.24252Z" fill="#161C26"/></svg>') center / 16px 16px no-repeat transparent;
 		}
 	}
@@ -66,6 +70,10 @@
 		width: 100%;
 		max-width: 600px;
 		box-shadow: 0px 1px 10px 4px rgba(0, 0, 0, 0.07);
+		
+		@include media('<=xxs') {
+			padding: 50px 20px 20px;
+		}
 	}
 	
 	&__content {
@@ -76,6 +84,32 @@
 			display: block;
 			margin: 0 auto;
 			width: 100%;
+		}
+	}
+
+	&__button {
+		right: auto;
+
+		&_prev {
+			left: 10px;
+
+			&::before {
+				width: 9px;
+				height: 14px;
+				background: svg-url('<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0.667691L1.40194 6L7 11.3323L6.29903 12L0 6L6.29903 0L7 0.667691Z" fill="#000000"/></svg>') center / 9px 14px no-repeat transparent;
+				margin-right: 3px;
+			}
+		}
+
+		&_next {
+			left: 52px;
+
+			&::before {
+				width: 9px;
+				height: 14px;
+				background: svg-url('<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-6.19803e-08 11.3323L5.59806 6L-9.94311e-07 0.667692L0.700967 4.11912e-07L7 6L0.700968 12L-6.19803e-08 11.3323Z" fill="#000000"/></svg>') center / 9px 14px no-repeat transparent;
+				margin-left: 3px;
+			}
 		}
 	}
 }

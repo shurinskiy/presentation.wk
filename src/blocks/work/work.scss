@@ -3,6 +3,10 @@
 .work {
 	$self: &;
 	padding: 100px 0 130px;
+	
+	@include media('<=xs') {
+		padding: 80px 0 100px;
+	}
 
 	&__inner {
 
@@ -19,23 +23,35 @@
 		align-items: center;
 		grid-gap: 80px 70px;
 		counter-reset: workCounter;
+		
+		@include media('<=sm') {
+			grid-gap: 60px 40px;
+		}
+
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
-		font-size: 20px;
+		font-size: fluid(20px, 17px);
 		font-weight: 300;
 		position: relative;
-		padding-left: 110px;
+		padding-left: fluid(110px, 70px);
+
+		@include media('<=xs') {
+
+		}
 
 		span {
-			font-weight: 400;
+			font-weight: 500;
 		}
 
 		&::before {
 			display: block;
 			counter-increment: workCounter;
 			content: '0'counter(workCounter);
-			font-size: 48px;
+			font-size: fluid(48px, 32px);
 			font-weight: 900;
 			color: var(--green);
 			padding: 10px 0 0 10px;

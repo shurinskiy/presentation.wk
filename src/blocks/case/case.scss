@@ -33,6 +33,10 @@
 		font-size: 15px;
 		color: #888;
 
+		@include media('<=xs') {
+			font-size: 14px;
+		}
+
 		svg {
 			transition: fill 0.3s;
 			fill: var(--green);
@@ -56,15 +60,28 @@
 
 	&__list {
 		font-size: 15px;
+
+		@include media('<=xs') {
+			font-size: 14px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
 		
 		li {
 			margin: 4px 0;
+			
+			@include media('<=xs') {
+				margin: 6px 0;
+			}
 		}
 		
 		a {
 			color: #888;
 			text-decoration: none;
 			transition: color 0.2s;
+			word-break: break-all;
 			
 			&:hover {
 				color: var(--green);
