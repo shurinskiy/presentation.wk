@@ -8,22 +8,36 @@
 	gap: 30px;
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 5px;
+	position: relative;
 
 	@include media('<=xxs') {
 		padding: 15px;
 	}
 
-	&.loading {
-		
-		#{$self}__submit {
-			span {
-				display: none;
-			}
-	
-			img {
-				display: block;
-			}
+	&.success {
+
+		#{$self}__success {
+			display: flex;
 		}
+		
+		#{$self}__field, #{$self}__submit {
+			visibility: hidden;
+		}
+	}
+
+	&__success {
+		position: absolute;
+		inset: 0;
+		animation: fadeIn 0.4s;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: var(--bright);
+		font-size: fluid(38px, 22px);
+		font-weight: 200;
+		padding: 32px;
+		display: none;
 	}
 
 	&__field {
@@ -107,19 +121,32 @@
 	&__submit {
 		@extend %reset-button;
 		padding: 12px 32px;
-		font-size: 18px;
 		line-height: 1.25;
-		background-color: var(--light);
+		font-size: 18px;
 		display: flex;
+		position: relative;
 		align-items: center;
 		justify-content: center;
-
-		span {
-
-		}
-
+		background-color: var(--light);
+		
 		img {
 			display: none;
+			position: absolute;
+			translate: -50% -50%;
+			height: 70%;
+			left: 50%;
+			top: 50%;
+		}
+
+		&.pending {
+			span {
+				color: transparent;
+				visibility: hidden;
+			}
+	
+			img {
+				display: block;
+			}
 		}
 	}
 }

@@ -2,7 +2,7 @@
 
 .work {
 	$self: &;
-	padding: 100px 0 130px;
+	padding: 80px 0 130px;
 	
 	@include media('<=xs') {
 		padding: 80px 0 100px;

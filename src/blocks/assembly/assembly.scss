@@ -3,7 +3,7 @@
 .assembly {
 	$self: &;
 	background-color: rgba(var(--background-rgb), 0.4);
-	padding: 135px 0;
+	padding: 80px 0 135px;
 	
 	@include media('<=md') {
 		padding: 80px 0;
