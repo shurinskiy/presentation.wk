@@ -2,12 +2,16 @@
 
 .approach {
 	$self: &;
-	background: url('./images/approach-bg.webp') center / cover no-repeat #18171D;
+	background: linear-gradient(rgba(0, 0, 0, 55%), rgba(0, 0, 0, 55%)), url('./images/approach-bg.webp') center / cover no-repeat #18171D;
 	padding: 170px 0 200px;
 	
 	@include media('<=xs') {
 		padding: 80px 0 100px;
 		background-position: center right;
+	}
+	
+	@include media('<=xxs') {
+		background: linear-gradient(rgba(0, 0, 0, 75%), rgba(0, 0, 0, 75%)), url('./images/approach-bg.webp') center / cover no-repeat #18171D;
 	}
 
 	&__inner {

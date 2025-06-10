@@ -2,7 +2,11 @@
 
 .footer {
 	$self: &;
-	background: url('./images/footer-bg.webp') top center / cover no-repeat #18171D;
+	background: linear-gradient(rgba(0, 0, 0, 80%), rgba(0, 0, 0, 80%)), url('./images/footer-bg.webp') top center / cover no-repeat #18171D;
+	
+	@include media('<=xxs') {
+		background: linear-gradient(rgba(0, 0, 0, 85%), rgba(0, 0, 0, 85%)), url('./images/footer-bg.webp') top center / cover no-repeat #18171D;
+	}
 
 	&__inner {
 		padding: 70px 0 120px;

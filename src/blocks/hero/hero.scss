@@ -2,12 +2,17 @@
 
 .hero {
 	$self: &;
-	min-height: calc(var(--vh, 1vh) * 100);
-	background: url('./images/hero-bg.webp') center / cover no-repeat #18171D;
+	min-height: calc(var(--vh, 1dvh) * 100);
+	background: linear-gradient(rgba(0, 0, 0, 55%), rgba(0, 0, 0, 55%)), url('./images/hero-bg.webp') center / cover no-repeat #18171D;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-flow: column nowrap;
+	
+	@include media('<=xxs') {
+		background: linear-gradient(rgba(0, 0, 0, 75%), rgba(0, 0, 0, 75%)), url('./images/hero-bg.webp') center / cover no-repeat #18171D;
+		
+	}
 
 	&__inner {
 		max-width: 800px;
@@ -18,6 +23,10 @@
 		
 		@include media('<=xs') {
 			gap: 60px;
+		}
+
+		@include media('<=xxs') {
+			gap: 40px;
 		}
 	}
 
@@ -33,13 +42,13 @@
 
 		strong {
 			display: block;
-			font-size: fluid(50px, 32px);
+			font-size: fluid(50px, 26px);
 			color: #fff;
 		}
 
 		span {
 			display: block;
-			font-size: fluid(26px, 20px);
+			font-size: fluid(24px, 16px);
 			color: var(--bright);
 			font-weight: 300;
 		}
@@ -52,6 +61,10 @@
 		max-width: 700px;
 		width: 100%;
 		gap: 20px 40px;
+		
+		@include media('<=xxs') {
+			gap: 15px 40px;
+		}
 	}
 
 	&__button {
@@ -70,8 +83,12 @@
 		
 		@include media('<=xs') {
 			padding: 10px 20px;
-			max-width: 280px;
+			max-width: 265px;
 			height: 60px;
+		}
+		
+		@include media('<=xxs') {
+			height: 55px;
 		}
 
 		&:hover {

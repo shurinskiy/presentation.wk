@@ -37,11 +37,19 @@
 			font-size: 14px;
 		}
 
+		@include media('<=xxs') {
+			font-size: 13px;
+		}
+
 		svg {
 			transition: fill 0.3s;
 			fill: var(--green);
 			aspect-ratio: 1;
 			width: 48px;
+			
+			@include media('<=xxs') {
+				width: 40px;
+			}
 		}
 
 		span {
